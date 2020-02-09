@@ -1,0 +1,585 @@
+@prefix : <urn:absolute:PRC_01_SalaAula#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:absolute:PRC_01_SalaAula> .
+
+<urn:absolute:PRC_01_SalaAula> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  urn:absolute:PRC_01_SalaAula#frequenta
+:frequenta rdf:type owl:ObjectProperty ;
+           owl:inverseOf :éFrequentadaPor ;
+           rdfs:domain :Aluno ;
+           rdfs:range :UC .
+
+
+###  urn:absolute:PRC_01_SalaAula#leciona
+:leciona rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éLecionadaPor ;
+         rdfs:domain :Professor ;
+         rdfs:range :UC .
+
+
+###  urn:absolute:PRC_01_SalaAula#éFrequentadaPor
+:éFrequentadaPor rdf:type owl:ObjectProperty .
+
+
+###  urn:absolute:PRC_01_SalaAula#éLecionadaPor
+:éLecionadaPor rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  urn:absolute:PRC_01_SalaAula#Ident
+:Ident rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Pessoa .
+
+
+###  urn:absolute:PRC_01_SalaAula#curso
+:curso rdf:type owl:DatatypeProperty .
+
+
+###  urn:absolute:PRC_01_SalaAula#email
+:email rdf:type owl:DatatypeProperty .
+
+
+###  urn:absolute:PRC_01_SalaAula#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  urn:absolute:PRC_01_SalaAula#Aluno
+:Aluno rdf:type owl:Class ;
+       rdfs:subClassOf :Pessoa .
+
+
+###  urn:absolute:PRC_01_SalaAula#Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+###  urn:absolute:PRC_01_SalaAula#Professor
+:Professor rdf:type owl:Class ;
+           rdfs:subClassOf :Pessoa .
+
+
+###  urn:absolute:PRC_01_SalaAula#UC
+:UC rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  urn:absolute:PRC_01_SalaAula#A63129
+:A63129 rdf:type owl:NamedIndividual ,
+                 :Aluno ;
+        :frequenta :gcs ,
+                   :prc ;
+        :Ident "A63129"^^xsd:string ;
+        :nome "José Duarte Freitas"^^xsd:string .
+
+
+
+
+###  urn:absolute:PRC_01_SalaAula#A81712
+            :A81712 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A81712"^^xsd:string ;
+                    :nome "Ana Filipa Pereira"^^xsd:string ;
+                    :email "A81712@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A71385
+            :A71385 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A71385"^^xsd:string ;
+                    :nome "Bruno Silva"^^xsd:string ;
+                    :email "A71385@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A78997
+            :A78997 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A78997"^^xsd:string ;
+                    :nome "Bruno Sousa"^^xsd:string ;
+                    :email "A78997@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A82324
+            :A82324 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A82324"^^xsd:string ;
+                    :nome "Carlos Barbosa"^^xsd:string ;
+                    :email "A82324@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A75536
+            :A75536 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A75536"^^xsd:string ;
+                    :nome "Eduardo Araújo"^^xsd:string ;
+                    :email "A75536@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#PG37149
+            :PG37149 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "PG37149"^^xsd:string ;
+                    :nome "Diego Silva"^^xsd:string ;
+                    :email "PG37149@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A71940
+            :A71940 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A71940"^^xsd:string ;
+                    :nome "Eduardo Cunha"^^xsd:string ;
+                    :email "A71940@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A70922
+            :A70922 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A70922"^^xsd:string ;
+                    :nome "Francisco Costa"^^xsd:string ;
+                    :email "A70922@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#PG38415
+            :PG38415 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "PG38415"^^xsd:string ;
+                    :nome "Henrique Ribeiro"^^xsd:string ;
+                    :email "PG38415@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A80757
+            :A80757 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A80757"^^xsd:string ;
+                    :nome "Jaime Leite"^^xsd:string ;
+                    :email "A80757@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#PG33874
+            :PG33874 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "PG33874"^^xsd:string ;
+                    :nome "João Grenhas"^^xsd:string ;
+                    :email "PG33874@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A75569
+            :A75569 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A75569"^^xsd:string ;
+                    :nome "João Leal"^^xsd:string ;
+                    :email "A75569@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A80874
+            :A80874 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A80874"^^xsd:string ;
+                    :nome "João Pimentel"^^xsd:string ;
+                    :email "A80874@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A76516
+            :A76516 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A76516"^^xsd:string ;
+                    :nome "João Vieira"^^xsd:string ;
+                    :email "A76516@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A80424
+            :A80424 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A80424"^^xsd:string ;
+                    :nome "José Carvalho"^^xsd:string ;
+                    :email "A80424@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A72187
+            :A72187 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A72187"^^xsd:string ;
+                    :nome "José Lima"^^xsd:string ;
+                    :email "A72187@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A74036
+            :A74036 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A74036"^^xsd:string ;
+                    :nome "Manuel Monteiro"^^xsd:string ;
+                    :email "A74036@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A67713
+            :A67713 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A67713"^^xsd:string ;
+                    :nome "Manuel Moreno"^^xsd:string ;
+                    :email "A67713@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#PG39292
+            :PG39292 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "PG39292"^^xsd:string ;
+                    :nome "Maria Pinto"^^xsd:string ;
+                    :email "PG39292@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#PG41089
+            :PG41089 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "PG41089"^^xsd:string ;
+                    :nome "Miguel Dias"^^xsd:string ;
+                    :email "PG41089@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#PG17918
+            :PG17918 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "PG17918"^^xsd:string ;
+                    :nome "Paulo Martins"^^xsd:string ;
+                    :email "PG17918@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A33524
+            :A33524 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A33524"^^xsd:string ;
+                    :nome "Pedro Paes"^^xsd:string ;
+                    :email "A33524@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A74264
+            :A74264 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A74264"^^xsd:string ;
+                    :nome "Rafael Silva"^^xsd:string ;
+                    :email "A74264@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A74568
+            :A74568 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A74568"^^xsd:string ;
+                    :nome "Ricardo Canela"^^xsd:string ;
+                    :email "A74568@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A75411
+            :A75411 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A75411"^^xsd:string ;
+                    :nome "Ricardo Leal"^^xsd:string ;
+                    :email "A75411@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A78764
+            :A78764 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A78764"^^xsd:string ;
+                    :nome "Ricardo Neves"^^xsd:string ;
+                    :email "A78764@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A78914
+            :A78914 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A78914"^^xsd:string ;
+                    :nome "Ricardo Martins"^^xsd:string ;
+                    :email "A78914@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A77045
+            :A77045 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A77045"^^xsd:string ;
+                    :nome "Ricardo Pereira"^^xsd:string ;
+                    :email "A77045@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A79947
+            :A79947 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A79947"^^xsd:string ;
+                    :nome "Rui Costa"^^xsd:string ;
+                    :email "A79947@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A74658
+            :A74658 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A74658"^^xsd:string ;
+                    :nome "Rui Vieira"^^xsd:string ;
+                    :email "A74658@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A82617
+            :A82617 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A82617"^^xsd:string ;
+                    :nome "Shahzod Yusupov"^^xsd:string ;
+                    :email "A82617@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A75328
+            :A75328 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A75328"^^xsd:string ;
+                    :nome "Tiago Baptista"^^xsd:string ;
+                    :email "A75328@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    ###  urn:absolute:PRC_01_SalaAula#A61032
+            :A61032 rdf:type owl:NamedIndividual ,
+                                    :Aluno ;
+                    :frequenta :gcs ,
+                            :prc ,
+                            :pri,
+                            :spln;
+                    :Ident "A61032"^^xsd:string ;
+                    :nome "Tiago Pereira"^^xsd:string ;
+                    :email "A61032@alunos.uminho.pt"^^xsd:string ;
+                    :curso "MIEI"^^xsd:string .
+                    
+
+                    
+    ###  urn:absolute:PRC_01_SalaAula#jcr
+    :jcr rdf:type owl:NamedIndividual ,
+              :Professor ;
+     :leciona :prc ,
+              :pri ;
+     :Ident "D1513"^^xsd:string ;
+     :nome "José Carlos Ramalho"^^xsd:string .
+
+    
+
+
+    ###  urn:absolute:PRC_01_SalaAula#prh
+    :prh rdf:type owl:NamedIndividual ,
+              :Professor ;
+     :leciona :gcs ;
+     :nome "Pedro Rangel Henriques"^^xsd:string .
+
+    
+
+
+    ###  urn:absolute:PRC_01_SalaAula#jj
+    :jj rdf:type owl:NamedIndividual ,
+              :Professor ;
+     :leciona :spln ;
+     :Ident "D"^^xsd:string ;
+     :nome "José João"^^xsd:string .
+
+     
+
+    
+    ###  urn:absolute:PRC_01_SalaAula#prc
+    :prc rdf:type owl:NamedIndividual ,
+                  :UC ;
+         :éFrequentadaPor  :A81712  , :A71385  , :A78997  , :A82324  , :PG37149  , :A75536  , :A71940  , :A70922  , :PG38415  , :A80757  , :PG33874  , :A75569  , :A80874  , :A76516  , :A80424  , :A72187  , :A74036  , :A67713  , :PG39292  , :PG41089  , :PG17918  , :A33524  , :A74264  , :A74568  , :A75411  , :A78914  , :A78764  , :A77045  , :A79947  , :A74658  , :A82617  , :A75328  , :A61032  ;
+         :éLecionadaPor :jcr ;
+         :nome "Processamento e Representação de Conhecimento"^^xsd:string .
+    
+
+         ###  urn:absolute:PRC_01_SalaAula#gcs
+    :gcs rdf:type owl:NamedIndividual ,
+              :UC ;
+     :éFrequentadaPor  :A81712  , :A71385  , :A78997  , :A82324  , :PG37149  , :A75536  , :A71940  , :A70922  , :PG38415  , :A80757  , :PG33874  , :A75569  , :A80874  , :A76516  , :A80424  , :A72187  , :A74036  , :A67713  , :PG39292  , :PG41089  , :PG17918  , :A33524  , :A74264  , :A74568  , :A75411  , :A78914  , :A78764  , :A77045  , :A79947  , :A74658  , :A82617  , :A75328  , :A61032  ;
+     :éLecionadaPor :prh ;
+     :nome "Gramáticas na Compreensão de Software"^^xsd:string .
+     
+
+     ###  urn:absolute:PRC_01_SalaAula#pri
+    :pri rdf:type owl:NamedIndividual ,
+                  :UC ;
+         :éFrequentadaPor  :A81712  , :A71385  , :A78997  , :A82324  , :PG37149  , :A75536  , :A71940  , :A70922  , :PG38415  , :A80757  , :PG33874  , :A75569  , :A80874  , :A76516  , :A80424  , :A72187  , :A74036  , :A67713  , :PG39292  , :PG41089  , :PG17918  , :A33524  , :A74264  , :A74568  , :A75411  , :A78914  , :A78764  , :A77045  , :A79947  , :A74658  , :A82617  , :A75328  , :A61032  ;
+         :éLecionadaPor :jcr ;
+         :nome "Processamento e Representação de Informação"^^xsd:string .
+    
+
+    ###  urn:absolute:PRC_01_SalaAula#spln
+    :spln rdf:type owl:NamedIndividual ,
+                  :UC ;
+         :éFrequentadaPor  :A81712  , :A71385  , :A78997  , :A82324  , :PG37149  , :A75536  , :A71940  , :A70922  , :PG38415  , :A80757  , :PG33874  , :A75569  , :A80874  , :A76516  , :A80424  , :A72187  , :A74036  , :A67713  , :PG39292  , :PG41089  , :PG17918  , :A33524  , :A74264  , :A74568  , :A75411  , :A78914  , :A78764  , :A77045  , :A79947  , :A74658  , :A82617  , :A75328  , :A61032  ;
+         :éLecionadaPor :jj ;
+         :nome "Scripting no Processamento de Linguagem Natural"^^xsd:string .
+    

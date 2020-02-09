@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC2020-A63129-TPC1</keyname>
+        <title>Povoamento da ontologia sala de aula </title>
+        <subtitle>Trabalho prático número um da UC PRC</subtitle>
+        <bdate>03-02-2020</bdate>
+        <edate>10-02-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A63129</identifier>
+            <name>Duarte Freitas</name>
+            <email>a63129@alunos.uminho.pt</email>
+            <photo path="img\cv.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>Criação de um script em <b>NodeJS</b> para passar informação de cada aluno para o <b>Protégé</b> <p>
+    </abstract>
+    
+    <deliverables>
+        <deliverable path="pr.xml">XML do Project Record</deliverable>
+        <deliverable path="pr.xsl">XSL do Project Record</deliverable>
+        <deliverable path="pr.html">HTML do Project Record</deliverable>
+        <deliverable path="./csv2ttl/csv2ttl.js">Script csv2ttl</deliverable>
+        <deliverable path="./csv2ttl/PRI2019-Avaliacao.csv">CSV</deliverable>
+        <deliverable path="./csv2ttl/salaAula.ttl">Ficheiro ttl</deliverable>
+        
+
+    </deliverables>
+    
+</pr>
