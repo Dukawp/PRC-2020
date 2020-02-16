@@ -1,0 +1,38 @@
+
+--- Nome dos compositores (ordem alfabética) ---
+
+PREFIX : <http://www.semanticweb.org/bosch/ontologies/2020/1/arquivo-musical#>
+SELECT DISTINCT ?compositor WHERE {
+    ?id a :Obra .
+    ?id :compositor ?compositor 
+}
+ORDER BY ?compositor
+
+
+--- Títulos das obras do tipo "Marcha de Desfile" ---
+PREFIX : <http://www.semanticweb.org/bosch/ontologies/2020/1/arquivo-musical#>
+SELECT DISTINCT ?titulo WHERE {
+    ?id a :Obra .
+    ?id :titulo ?titulo .
+    ?id :tipo "Marcha de Desfile"
+}
+
+
+--- Para cada obra, número de partituras que estão catalogadas ---
+PREFIX : <http://www.semanticweb.org/bosch/ontologies/2020/1/arquivo-musical#>
+SELECT ?obra (COUNT(?instrumento) AS ?numeroPartituras) WHERE {
+    ?id a :Obra .
+    ?id :titulo ?obra .
+    ?id :éTocadaPor ?instrumento .
+}
+GROUP BY ?obra
+
+
+--- Título das obras com partitura para Bombo ---
+PREFIX : <http://www.semanticweb.org/bosch/ontologies/2020/1/arquivo-musical#>
+SELECT DISTINCT ?obra WHERE {
+    ?id a :Obra .
+    ?id :titulo ?obra .
+    ?id :éTocadaPor ?instrumento .
+    ?instrumento :partitura "Bombo"
+}
