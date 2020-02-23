@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    .w3-container
+      .w3-card-4
+        header.w3-container.w3-blue
+          h2 SPARQL Query
+    br
+
+    //.w3-container
+      h2 Choose repository
+      .w3-dropdown-hover
+        button.w3-button.w3-black Repository
+        .w3-dropdown-content.w3-bar-block.w3-border
+            each rep in data
+                a(href="#" class="w3-bar-item w3-button")=rep
+    
+    
+    br
+
+    .w3-container
+      .w3-card-4
+        .w3-table-all
+          .w3-cell-row
+            form.w3-container(action="/query" method="get" enctype="multipart/form-data")
+              label(for="reps") Choose a repository:
+              select(id="repoID" name="repo")
+                each rep in data
+                  option(value=rep)=rep
+              label.w3-cell Insert query:
+              textarea.input.w3-input.w3-cell.w3-border(type="text" name="query")
+              input.w3-input(type="submit" value="Run")
+            br
+            header.w3-container
+              h3 Result:
+              if dquery.length > 0
+                each n in dquery
+                  p=JSON.stringify(n)
+              else
+                p Sem resultados!
+          

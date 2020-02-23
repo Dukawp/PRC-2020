@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC2020-A63129-TPC3</keyname>
+        <title>Interface para realizar queries SPARQL</title>
+        <subtitle>Trabalho prático número três da UC PRC</subtitle>
+        <bdate>17-02-2020</bdate>
+        <edate>24-02-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A63129</identifier>
+            <name>Duarte Freitas</name>
+            <email>a63129@alunos.uminho.pt</email>
+            <photo path="img\cv.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p> Neste trabalho foi usado <b>NodeJS</b> e <b>Pug</b> para gerar uma interface grafica que permita 
+            escrever queries em <b>SPARQL</b> e mostrar o seu resultado. 
+        </p> 
+        <p>Para utilizar a interface basta então escolher o repositorio do <b>GraphDB</b> sobre o qual quer 
+            aplicar a query, escrever a query e carregar em RUN.
+        </p>
+    </abstract>
+    
+    <deliverables>
+        <deliverable path="./interface/views/index.pug">Pug</deliverable>
+        <deliverable path="./interface/routes/index.js">Router</deliverable>
+    </deliverables>
+    
+</pr>
