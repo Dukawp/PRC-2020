@@ -1,0 +1,44 @@
+1. Obtem uma lista de todos os pokemons catalogadas com os seguintes atributos: número, nome em inglês e tipo;
+	SELECT DISTINCT ?p WHERE {
+	    ?p rdf:type :Pokemon .
+	    ?p :Number ?n .
+	    ?p :Name ?name .
+	    FILTER (langMatches(lang(?name),"en")) .
+	    ?p :HasType ?type .
+	}
+
+2. Quantos pokémons estão catalogadas na ontologia?
+	SELECT (count(distinct ?p) as ?numeroPokemons) WHERE {
+	    ?p rdf:type :Pokemon .
+	}
+
+3. Quantas evoluções tem o pokémon com número 5?
+	SELECT (count(?po) as ?evolucoes) WHERE {
+	    ?p rdf:type :Pokemon .
+	    ?p :EvolvesFrom ?po .
+	    ?p :Number 5 .
+	}
+
+4. Quais são os pokémons para os quais pode evoluir o pokémon de nome "Eevee"?
+	SELECT ?name WHERE {
+	    ?p rdf:type :Pokemon .
+	    ?p :Name "Eevee"@en .
+	    ?p :EvolvesFrom ?evos .
+	    ?evos :EvolvesTo ?evo .
+	    ?evo :Name ?name .
+	    FILTER (langMatches(lang(?name),"en")) .
+	}
+
+5. Quantos tipos diferentes de pokémons exitem na ontologia?
+	SELECT (COUNT(DISTINCT ?type) AS ?types) WHERE {
+	    ?p rdf:type :Pokemon .
+	    ?p :HasType ?type .
+	}
+
+6. Quantos pokémons existem associados a cada tipo?
+	SELECT ?type (COUNT(?p) AS ?numeroPokemons) WHERE {
+	    ?p rdf:type :Pokemon .
+	    ?p :HasType ?type .
+	}
+	GROUP BY ?type
+	ORDER BY DESC(?numeroPokemons)

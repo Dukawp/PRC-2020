@@ -1,0 +1,325 @@
+@prefix : <http://www.semanticweb.org/duka_/ontologies/2020/VamosAsCompras#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras> .
+
+<http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#compra
+:compra rdf:type owl:ObjectProperty ;
+        owl:inverseOf :éCompradoPor ;
+        rdfs:domain :Cliente ;
+        rdfs:range :Produto .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#vende
+:vende rdf:type owl:ObjectProperty ;
+       owl:inverseOf :éVendidoPor ;
+       rdfs:domain :Loja ;
+       rdfs:range :Produto .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#éCompradoPor
+:éCompradoPor rdf:type owl:ObjectProperty ;
+              rdfs:domain :Produto ;
+              rdfs:range :Cliente .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#éVendidoPor
+:éVendidoPor rdf:type owl:ObjectProperty ;
+             rdfs:domain :Produto ;
+             rdfs:range :Loja .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#email
+:email rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#id
+:id rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#morada
+:morada rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#preco
+:preco rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#telefone
+:telefone rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#Cliente
+:Cliente rdf:type owl:Class ;
+         rdfs:subClassOf :CompraVenda .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#CompraVenda
+:CompraVenda rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#Loja
+:Loja rdf:type owl:Class ;
+      rdfs:subClassOf :CompraVenda .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#LojaGrande
+:LojaGrande rdf:type owl:Class ;
+            rdfs:subClassOf :Loja .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#Produto
+:Produto rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#agua
+:agua rdf:type owl:NamedIndividual ,
+               :Produto ;
+      :éCompradoPor :duarte ,
+                    :rafael ,
+                    :ricardo ;
+      :éVendidoPor :cafeW ,
+                   :continente ,
+                   :merceariaDoJoao ;
+      :id "cp002"^^xsd:string ;
+      :preco "0.20"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#arroz
+:arroz rdf:type owl:NamedIndividual ,
+                :Produto ;
+       :éCompradoPor :prh ,
+                     :ricardo ;
+       :éVendidoPor :continente ,
+                    :merceariaDoJoao ;
+       :id "cp006"^^xsd:string ;
+       :preco "1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#bolachas
+:bolachas rdf:type owl:NamedIndividual ,
+                   :Produto ;
+          :éVendidoPor :continente ;
+          :id "cp003"^^xsd:string ;
+          :preco "1"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#cafe
+:cafe rdf:type owl:NamedIndividual ,
+               :Produto ;
+      :éCompradoPor :duarte ,
+                    :jcr ,
+                    :prh ,
+                    :rafael ,
+                    :ricardo ;
+      :éVendidoPor :cafeW ,
+                   :continente ;
+      :id "cp001"^^xsd:string ;
+      :preco "5"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#cafeW
+:cafeW rdf:type owl:NamedIndividual ,
+                :Loja ;
+       :vende :agua ,
+              :cafe ;
+       :email "cafeW@lojas.pt"^^xsd:string ;
+       :morada "Braga"^^xsd:string ;
+       :nome "Cafe Willows"^^xsd:string ;
+       :telefone "253"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#carne
+:carne rdf:type owl:NamedIndividual ,
+                :Produto ;
+       :éCompradoPor :rafael ;
+       :éVendidoPor :lidl ,
+                    :talhoDoZe ;
+       :id "cp100"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#chocolate
+:chocolate rdf:type owl:NamedIndividual ,
+                    :Produto ;
+           :éCompradoPor :duarte ,
+                         :jcr ;
+           :éVendidoPor :continente ,
+                        :lidl ,
+                        :merceariaDoJoao ;
+           :id "cp005"^^xsd:string ;
+           :preco "2"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#continente
+:continente rdf:type owl:NamedIndividual ,
+                     :LojaGrande ;
+            :vende :agua ,
+                   :arroz ,
+                   :bolachas ,
+                   :cafe ,
+                   :chocolate ,
+                   :massa ,
+                   :vinho ;
+            :email "continenteBraga@loja.pt"^^xsd:string ;
+            :morada "Braga"^^xsd:string ;
+            :nome "continente"^^xsd:string ;
+            :telefone "253"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#duarte
+:duarte rdf:type owl:NamedIndividual ,
+                 :Cliente ;
+        :compra :agua ,
+                :cafe ,
+                :chocolate ,
+                :massa ;
+        :email "duarte@UM.pt"^^xsd:string ;
+        :morada "Fafe"^^xsd:string ;
+        :nome "Duarte"^^xsd:string ;
+        :telefone "91"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#jcr
+:jcr rdf:type owl:NamedIndividual ,
+              :Cliente ;
+     :compra :cafe ,
+             :chocolate ,
+             :massa ;
+     :email "jcr@UM.pt"^^xsd:string ;
+     :morada "Braga"^^xsd:string ;
+     :nome "José Ramalho"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#leite
+:leite rdf:type owl:NamedIndividual ,
+                :Produto ;
+       :éVendidoPor :lidl ,
+                    :merceariaDoJoao ;
+       :id "cp009"^^xsd:string ;
+       :preco "0.60"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#lidl
+:lidl rdf:type owl:NamedIndividual ,
+               :LojaGrande ;
+      :vende :carne ,
+             :chocolate ,
+             :leite ,
+             :papel ,
+             :vinho ;
+      :email "lidlBraga@lojas.pt"^^xsd:string ;
+      :morada "Braga"^^xsd:string ;
+      :nome "Lidl"^^xsd:string ;
+      :telefone "253"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#massa
+:massa rdf:type owl:NamedIndividual ,
+                :Produto ;
+       :éCompradoPor :duarte ,
+                     :jcr ,
+                     :ricardo ;
+       :éVendidoPor :continente ,
+                    :merceariaDoJoao ;
+       :id "cp007"^^xsd:string ;
+       :preco "0.60"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#merceariaDoJoao
+:merceariaDoJoao rdf:type owl:NamedIndividual ,
+                          :Loja ;
+                 :vende :agua ,
+                        :arroz ,
+                        :chocolate ,
+                        :leite ,
+                        :massa ;
+                 :email "mercJoao@loja.pt"^^xsd:string ;
+                 :morada "Braga"^^xsd:string ;
+                 :nome "Mercearia do Joao"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#papel
+:papel rdf:type owl:NamedIndividual ,
+                :Produto ;
+       :éVendidoPor :lidl ;
+       :id "cp008"^^xsd:string ;
+       :preco "3"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#prh
+:prh rdf:type owl:NamedIndividual ,
+              :Cliente ;
+     :compra :arroz ,
+             :cafe ;
+     :email "prh@UM.pt"^^xsd:string ;
+     :morada "Braga"^^xsd:string ;
+     :nome "Pedro Rangel"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#rafael
+:rafael rdf:type owl:NamedIndividual ,
+                 :Cliente ;
+        :compra :agua ,
+                :cafe ,
+                :carne ;
+        :email "rafael@UM.pt"^^xsd:string ;
+        :morada "Chaves"^^xsd:string ;
+        :nome "Rafael"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#ricardo
+:ricardo rdf:type owl:NamedIndividual ,
+                  :Cliente ;
+         :compra :agua ,
+                 :arroz ,
+                 :cafe ,
+                 :massa ;
+         :email "ricardo@UM.pt"^^xsd:string ;
+         :morada "Arcos"^^xsd:string ;
+         :nome "Ricardo"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#talhoDoZe
+:talhoDoZe rdf:type owl:NamedIndividual ,
+                    :Loja ;
+           :vende :carne ;
+           :email "talhoDoZe@cidade.pt"^^xsd:string ;
+           :morada "Braga"^^xsd:string ;
+           :nome "Talho Cidade Nova"^^xsd:string .
+
+
+###  http://www.semanticweb.org/duka_/ontologies/2020/vamosAsCompras#vinho
+:vinho rdf:type owl:NamedIndividual ,
+                :Produto ;
+       :éVendidoPor :continente ,
+                    :lidl ;
+       :id "cp010"^^xsd:string ;
+       :preco "3"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

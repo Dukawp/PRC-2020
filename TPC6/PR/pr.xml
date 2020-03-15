@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC2020-A63129-TPC6</keyname>
+        <title>Ficha prc2018-teste</title>
+        <subtitle>Trabalho prático número seis da UC PRC</subtitle>
+        <bdate>09-03-2020</bdate>
+        <edate>16-03-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A63129</identifier>
+            <name>Duarte Freitas</name>
+            <email>a63129@alunos.uminho.pt</email>
+            <photo path="img\cv.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>   
+        </p> 
+    </abstract>
+    
+    <deliverables>
+        <deliverable path="./ficha_prc2018_teste/ex1.png">Ex1 grafo</deliverable>
+        <deliverable path="./ficha_prc2018_teste/ex2/vamosAsCompras.ttl">Ex2 Ontologia</deliverable>
+        <deliverable path="./ficha_prc2018_teste/ex2/queries.txt">Ex2 Queries</deliverable>
+        <deliverable path="./ficha_prc2018_teste/ex3.txt">Ex3 Queries</deliverable>
+        <deliverable path="./ficha_prc2018_teste/ex4.txt">Ex4 Queries</deliverable>
+    </deliverables>
+    
+</pr>

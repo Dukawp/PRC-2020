@@ -1,0 +1,36 @@
+1. Que lojas vendem o produto A?
+a = cafe
+
+PREFIX : <http://www.semanticweb.org/duka_/ontologies/2020/VamosAsCompras#>
+select ?loja where {
+    :cafe a :Produto .
+    ?l a :Loja .
+    ?l :vende :cafe .
+    ?l :nome ?loja .
+}
+
+
+2. Que produtos são comprados pelo cliente X?
+X = duarte
+
+PREFIX : <http://www.semanticweb.org/duka_/ontologies/2020/VamosAsCompras#>
+ select ?id ?preco where {
+    :duarte a :Cliente .
+    ?p a :Produto .
+    ?p :éCompradoPor :duarte .
+    ?p :id ?id .
+	?p :preco ?preco.
+}
+
+3. Quem são os potenciais clientes da loja Y?
+y = continente
+
+PREFIX : <http://www.semanticweb.org/duka_/ontologies/2020/VamosAsCompras#>
+select distinct ?cliente where {
+    :continente a :Loja .
+    :continente :vende ?p .
+    ?c :compra ?p .
+    ?c a :Cliente .
+    ?c :nome ?cliente .
+}
+
