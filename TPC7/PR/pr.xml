@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC2020-A63129-TPC7</keyname>
+        <title>Povoamento da Ontologia Cinema</title>
+        <subtitle>Trabalho prático número sete da UC PRC</subtitle>
+        <bdate>16-03-2020</bdate>
+        <edate>23-03-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A63129</identifier>
+            <name>Duarte Freitas</name>
+            <email>a63129@alunos.uminho.pt</email>
+            <photo path="img\cv.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>   
+            Primeiramente mantive o foco na Ontologia começada na aula , corrigindo erros e completando a mesma.
+            De seguida para a povoar com filmes, atores, personagens e toda a informação pertinente foi preciso encontrar uma base de dados que 
+            me facultasse essa mesma informação.
+            Extração dos dados atraves da API fornecida pelo site <i>https://developers.themoviedb.org/</i> com auxilio de um script em <b>python</b>.
+            Por fim passar a informação guardada em json para ttl com um script em <b>python</b>
+        </p> 
+    </abstract>
+    
+    <deliverables>
+        <deliverable path="../ontologia/json2TTL.py">Script para converter json em TTL</deliverable>
+        <deliverable path="../ontologia/getData.py">Script para extrair dados</deliverable>
+        <deliverable path="../ontologia/cinema.ttl">Ficheiro da ontologia</deliverable>        
+    </deliverables>
+    
+</pr>
