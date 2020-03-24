@@ -12,7 +12,7 @@ var getLink = "http://localhost:7200/repositories/cinema2020" + "?query="
 
 
 Linguas.lista = async function(req) {
-    var query = `Select ?s ?linguas where {
+    var query = `Select ?s ?lingua where {
         ?s a :Língua. 
         bind(replace(strafter(str(?s),"cinema#"),"_"," ")AS ?lingua).
     }
