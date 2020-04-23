@@ -3,9 +3,10 @@
 ## Project setup
 ```
 npm i --save
+npm i nodemon --save
 ```
 
-### Compiles and hot-reloads for development
+### Compiles 
 ```
 npm start
 ```
