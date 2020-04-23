@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRC2020-A63129-TPC10</keyname>
+        <title>Cinema2020 API-Rest and Interface</title>
+        <subtitle>Trabalho prático número dez da UC PRC</subtitle>
+        <bdate>20-04-2020</bdate>
+        <edate>27-04-2020</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A63129</identifier>
+            <name>Duarte Freitas</name>
+            <email>a63129@alunos.uminho.pt</email>
+            <photo path="img\cv.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p> 
+            Desenvolvimento de uma interface em <i>VueJS</i> que permita a visualização de todos os filmes e atores presentes na 
+            ontologia <b>cinemateca</b>. Para alem da visualização geral de cada filme e ator também é possivel ver a informação 
+            detalhada de cada filme/ator numa nova janela(pagina web).
+        </p> 
+    </abstract>
+    
+    <deliverables>
+        <deliverable path="../cinemateca_Interface/src/App.vue">App</deliverable>
+        <deliverable path="../cinemateca_Interface/src/views/Principal.vue">View para lista filmes</deliverable>        
+        <deliverable path="../cinemateca_Interface/src/views/PrincipalAtores.vue">View para lista atores</deliverable>        
+        <deliverable path="../cinemateca_Interface/src/views/ConsultaFilme.vue">View para consulta filme</deliverable>        
+        <deliverable path="../cinemateca_Interface/src/views/ConsultaAtor.vue">View para consulta ator</deliverable>        
+        <deliverable path="../cinemateca_Interface/src/components/ListaFilmes.vue">Component Lista fillmes</deliverable>        
+        <deliverable path="../cinemateca_Interface/src/components/ListaAtores.vue">Component Lista atores</deliverable>        
+        <deliverable path="../cinemateca_Interface/src/components/ConsultaFilme.vue">Component Consulta filme</deliverable>        
+        <deliverable path="../cinemateca_Interface/src/components/ConsultaAtor.vue">Component Consulta ator</deliverable>        
+        <deliverable path="../cinemateca_Rest/routes/filmes.js">Router filmes</deliverable>        
+        <deliverable path="../cinemateca_Rest/controllers/filmes.js">Controller filmes</deliverable>        
+        <deliverable path="../cinemateca_Rest/routes/atores.js">Router atores</deliverable>        
+        <deliverable path="../cinemateca_Rest/controllers/atores.js">Controller atores</deliverable>        
+    </deliverables>
+    
+</pr>
