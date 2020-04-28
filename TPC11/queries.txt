@@ -1,0 +1,70 @@
+1- tios
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select ?p ?pnome ?tnome where { 
+	?p :name ?pnome.
+    ?p :hasParent ?h.
+    ?h :hasSibling ?t.
+    ?t :name ?tnome
+}  
+
+2- primos
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select ?p ?pnome ?cnome where { 
+	?p :name ?pnome.
+    ?p :hasParent ?h.
+    ?h :hasSibling ?t.
+    ?t :hasChild ?c.
+    ?c :name ?cnome
+}  
+
+3- ancestrais (3 gerações)
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select ?s ?pnome ?pai ?avo ?bis where { 
+    ?s :hasParent ?p.
+    ?p :hasParent ?a.
+    ?a :hasParent ?b.
+    ?s :name ?pnome.
+    ?a :name ?avo.
+    ?p :name ?pai.
+    ?b :name ?bis
+}
+
+4- descendentes (3 gerações)
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select ?s ?pnome ?filho ?neto ?bis where { 
+    ?s :hasChild ?f.
+    ?f :hasChild ?n.
+    ?n :hasChild ?b.
+    ?s :name ?pnome.
+    ?f :name ?filho.
+    ?n :name ?neto.
+    ?b :name ?bis
+}
+
+5- cunhados
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select DISTINCT ?s ?sujeito ?cunhado where { 
+	?s :hasChild ?f.
+    ?f :hasParent ?p.
+    ?p :hasSibling ?i.
+    ?s :name ?sujeito.
+    ?i :name ?cunhado.
+    filter(?s != ?p)    
+}
+
+6- sogro/sogra
+
+PREFIX : <http://www.di.uminho.pt/prc2020/familyTree#>
+select DISTINCT ?s ?sujeito ?sogro where { 
+	?s :hasChild ?f.
+    ?f :hasParent ?p.
+    ?p :hasParent ?i.
+    ?s :name ?sujeito.
+    ?i :name ?sogro.
+    filter(?s != ?p)    
+}
